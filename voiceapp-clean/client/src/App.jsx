@@ -1,7 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import WaveSurfer from "wavesurfer.js";
 
-const API = "http://localhost:3000";
+const API = window.location.hostname === "localhost"
+  ? "http://localhost:3000"   // for local development
+  : "https://chatster.cloud"; // for live site
+
 
 export default function App() {
   /* =======================
