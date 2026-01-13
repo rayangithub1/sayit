@@ -1,9 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import WaveSurfer from "wavesurfer.js";
 
-const API = window.location.hostname === "localhost"
-  ? "http://localhost:3000"   // for local development
-  : "https://chatster.cloud"; // for live site
+const API = import.meta.env.VITE_API_URL;
+ // for live site
 
 
 export default function App() {
